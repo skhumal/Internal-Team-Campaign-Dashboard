@@ -1,18 +1,16 @@
-// SIDEBAR TOGGLE
+var isSidebarOpen = false; // Boolean to track sidebar state
+var sidebar = document.getElementById("sidebar");
 
-var sidebarOpen = false;
-var sidebar = getElementById("sidebar");
-
-function sidebarOpen(){
-  if (!sidebarOpen){
+function openSidebarMenu() {
+  if (!isSidebarOpen) {
     sidebar.classList.add("sidebar-responsive");
-    sidebarOpen = true;
+    isSidebarOpen = true;
   }
 }
 
-function closeSidebar(){
-  if (sidebarOpen){
+function closeSidebarMenu() {
+  if (isSidebarOpen) {
     sidebar.classList.remove("sidebar-responsive");
-    sidebarOpen = false;
+    isSidebarOpen = false;
   }
 }
